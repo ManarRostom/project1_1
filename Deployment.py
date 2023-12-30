@@ -6,9 +6,9 @@ import pandas as pd
 import sklearn
 import category_encoders
 
-inputs_dict = joblib.load('Data/inputs_dict.pkl')
-Model = joblib.load('Data/Model.pkl')
-mlb_dict = joblib.load('Data/mlb_dict.pkl')
+inputs_dict = joblib.load('inputs_dict.pkl')
+Model = joblib.load('Model.pkl')
+mlb_dict = joblib.load('mlb_dict.pkl')
 
 def encode_cats(df_cats):
     rest_type_df = pd.DataFrame(mlb_dict['mlb_rest_type'].transform(df_cats['rest_type']), columns=mlb_dict['mlb_rest_type'].classes_)
