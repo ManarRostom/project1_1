@@ -6,7 +6,7 @@ import sklearn
 import category_encoders
 
 inputs_dict = joblib.load('inputs_dict.pkl')
-# Model_ = joblib.load("model")
+Model_ = joblib.load("pipeline.pkl")
 mlb_dict = joblib.load('mlb_dict.pkl')
 
 def encode_cats(df_cats):
