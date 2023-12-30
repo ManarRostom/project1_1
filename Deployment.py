@@ -1,4 +1,3 @@
-
 import streamlit as st
 import numpy as np
 import joblib 
@@ -7,7 +6,7 @@ import sklearn
 import category_encoders
 
 inputs_dict = joblib.load('inputs_dict.pkl')
-Model_ = joblib.load("model")
+# Model_ = joblib.load("model")
 mlb_dict = joblib.load('mlb_dict.pkl')
 
 def encode_cats(df_cats):
