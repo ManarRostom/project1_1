@@ -7,7 +7,7 @@ import sklearn
 import category_encoders
 
 inputs_dict = joblib.load('inputs_dict.pkl')
-Model = joblib.load('Model.pkl')
+Model_ = joblib.load('Model.pkl')
 mlb_dict = joblib.load('mlb_dict.pkl')
 
 def encode_cats(df_cats):
@@ -43,7 +43,7 @@ def Prediction(online_order, book_table, location, approx_cost, rest_type, cuisi
     ## Call encode_cats Function
     encoded_df = encode_cats(df_cats)
     df_test2 = pd.concat([df_test,encoded_df], axis=1)
-    return Model.predict(df_test2)[0]
+    return Model_.predict(df_test2)[0]
 
 
 def Main():
